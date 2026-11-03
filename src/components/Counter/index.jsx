@@ -1,9 +1,10 @@
 import "./counter.css";
 
-export function Counter() {
+export function Counter({ doneCount, total }) {
   return (
     <section className="daily-progress">
-  <p>Hoje: 1 de 5</p>
-  </section> 
+      <p>Hoje: {doneCount} de {total}</p>
+      <progress value={doneCount} max={total} />
+    </section>
   );
 }
